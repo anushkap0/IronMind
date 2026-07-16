@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: 10 10 12;
+  --color-surface: 21 21 23;
+  --color-surface-2: 29 29 33;
+  --color-border: 42 42 47;
+  --color-text: 245 241 236;
+  --color-text-muted: 139 139 149;
+  --color-accent: 227 27 61;
+  --color-accent-2: 255 95 109;
+}
+
+html.light {
+  --color-bg: 245 241 236;
+  --color-surface: 255 255 255;
+  --color-surface-2: 240 235 229;
+  --color-border: 224 218 210;
+  --color-text: 26 24 23;
+  --color-text-muted: 100 97 94;
+  --color-accent: 227 27 61;
+  --color-accent-2: 199 33 58;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--color-accent)) rgb(var(--color-surface));
+}
+*::-webkit-scrollbar { width: 8px; }
+*::-webkit-scrollbar-track { background: rgb(var(--color-surface)); }
+*::-webkit-scrollbar-thumb { background-color: rgb(var(--color-accent)); border-radius: 8px; }
+
+html, body, #root { height: 100%; }
+
+body {
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-text));
+  font-family: "Inter", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.font-display { font-family: "Poppins", sans-serif; letter-spacing: 0; }
+
+.grid-fade {
+  background-image:
+    linear-gradient(rgba(227, 27, 61, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(227, 27, 61, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+:focus-visible { outline: 2px solid rgb(var(--color-accent-2)); outline-offset: 2px; }
+
+@media (pointer: fine) {
+  body, a, button, [role="button"] { cursor: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
