@@ -19,3 +19,4 @@ chromadb==0.5.20
 slowapi==0.1.9
 pytest==8.3.3
 apscheduler==3.10.4
+pip install psycopg2-binary
