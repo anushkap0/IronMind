@@ -1,4 +1,19 @@
 services:
+  db:
+    image: postgres:16-alpine
+    container_name: ironmind-db
+    environment:
+      - POSTGRES_USER=ironmind
+      - POSTGRES_PASSWORD=tree90_op12
+      - POSTGRES_DB=fitness
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ironmind -d fitness"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
   backend:
     build: ./backend
     container_name: ironmind-backend
@@ -9,11 +24,14 @@ services:
       - ./backend/.env
     environment:
       - FRONTEND_ORIGIN=http://localhost:5173
+      - DATABASE_URL=postgresql://ironmind:tree90_op12@db:5432/fitness
     volumes:
-      - backend_data:/app/data
       - chroma_data:/app/chroma_data
     ports:
       - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
     restart: unless-stopped
 
   frontend:
@@ -29,5 +47,5 @@ services:
     restart: unless-stopped
 
 volumes:
-  backend_data:
+  postgres_data:
   chroma_data:

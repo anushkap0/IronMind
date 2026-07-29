@@ -17,3 +17,8 @@ frontend/.env
 .DS_Store
 .vscode/
 .idea/
+
+.env
+venv/
+__pycache__/
+*.pyc

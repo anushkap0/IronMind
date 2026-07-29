@@ -1,14 +1,10 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-
 from app.database import get_db
 from app import models
 from app.deps import get_current_user
 from app.progress import compute_streak, compute_badges
-
 router = APIRouter(prefix="/api/progress", tags=["Progress"])
-
-
 @router.get("/summary")
 def progress_summary(
     db: Session = Depends(get_db),
