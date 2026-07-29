@@ -105,3 +105,34 @@ The application combines modern web technologies, AI/ML, computer vision, real-t
                    │
                    ▼
               User Data
+```
+### Project structure
+```text 
+fitness-app/
+│
+├── backend/
+│   ├── app/
+│   │   ├── routers/
+│   │   ├── rag/
+│   │   ├── models.py
+│   │   ├── schemas.py
+│   │   ├── security.py
+│   │   ├── database.py
+│   │   └── main.py
+│   │
+│   ├── tests/
+│   ├── requirements.txt
+│   └── Dockerfile
+│
+├── frontend/
+│   ├── src/
+│   │   ├── pages/
+│   │   ├── components/
+│   │   ├── context/
+│   │   └── api/
+│   │
+│   ├── package.json
+│   └── Dockerfile
+│
+├── docker-compose.yml
+└── README.md
