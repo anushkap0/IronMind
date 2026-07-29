@@ -4,7 +4,7 @@ services:
     container_name: ironmind-db
     environment:
       - POSTGRES_USER=ironmind
-      - POSTGRES_PASSWORD=tree90_op12
+      - POSTGRES_PASSWORD=
       - POSTGRES_DB=fitness
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -24,7 +24,7 @@ services:
       - ./backend/.env
     environment:
       - FRONTEND_ORIGIN=http://localhost:5173
-      - DATABASE_URL=postgresql://ironmind:tree90_op12@db:5432/fitness
+      - DATABASE_URL=postgresql://ironmind:pswrd@db:5432/fitness
     volumes:
       - chroma_data:/app/chroma_data
     ports:
