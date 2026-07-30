@@ -415,7 +415,7 @@ IronMind can be deployed using the following architecture:
 
 | Component | Platform |
 |---|---|
-| Frontend | Vercel |
+| Frontend | Render |
 | Backend | Render |
 | Database | Supabase PostgreSQL |
 | Source Code | GitHub |
