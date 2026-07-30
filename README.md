@@ -88,8 +88,6 @@ The application combines modern web technologies, artificial intelligence, machi
                          │      Frontend        │
                          └──────────┬───────────┘
                                     │
-                                    ▼
-                              Vercel Hosting
                                     │
                                     │ API Requests
                                     ▼
