@@ -391,10 +391,7 @@ IronMind can be deployed using the following architecture:
                  │ React + Vite     │
                  │ Frontend         │
                  └────────┬────────┘
-                          │
-                          ▼
-                     Vercel
-                          │
+                          |
                           ▼
                  ┌─────────────────┐
                  │ FastAPI         │
