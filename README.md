@@ -438,9 +438,9 @@ For production deployment, configure all required environment variables in the h
 
 # 👩‍💻 Author
 
-**Anushka Pokhriyal**
+**Anushka **
 
-GitHub: [Anushka-Pokhriyal](https://github.com/Anushka-Pokhriyal)
+GitHub: [Anushka](https://github.com/Anushka-Pokhriyal)
 
 ---
 
